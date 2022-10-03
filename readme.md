@@ -9,3 +9,4 @@ Contribution appreciated :)
 | Mobile Security               | [readme.md](https://github.com/AmazingFriedChickken/TCTT2022-Write-Ups/blob/main/Mobile%20Security/readme.md)               |
 | Network Security              | [readme.md](https://github.com/AmazingFriedChickken/TCTT2022-Write-Ups/blob/main/Network%20Security/readme.md)              |
 | Reverse Engineering & Pwnable | [readme.md](https://github.com/AmazingFriedChickken/TCTT2022-Write-Ups/blob/main/Reverse%20Engineering%20%26%20Pwnable/readme.md) |
+| Cryptography | [readme.md](https://github.com/AmazingFriedChickken/TCTT2022-Write-Ups/blob/main/Cryptography/readme.md) |
