@@ -1,26 +1,11 @@
-# Network - Challenge 01
+$ tshark -r network_security01.pcap -Y "frame contains PK" -z follow,tcp,raw,20097 | tail -n+8 | head -n-1 | xxd -r -p> secret.zip
 
-This challenge was an pcap file.
+$ fcrackzip -u -D -p rockyou.txt secret.zip
 
-Open pcap file with NetworkMiner.
+PASSWORD FOUND!!!!: pw == password
 
-Found a password protected zip file.
+$ 7z x secret.zip -ppassword
 
-![image-20221003135433600](./network-challenge01.assets/image-20221003135433600.png)
+$ strings secret
 
-![image-20221003135510015](./network-challenge01.assets/image-20221003135510015.png)
-
-Trying to bruteforce a zip password and regret 5 second later.
-
-```
-fcrackzip secret.zip -u -D -p rockyou.txt
-```
-
-![image-20221003135811195](./network-challenge01.assets/image-20221003135811195.png)
-
- (╯°□°)╯︵ ┻━┻
-
-![image-20221003135849265](./network-challenge01.assets/image-20221003135849265.png)
-
-
-
+tctt2022{Steal_Data_via_FTP}
