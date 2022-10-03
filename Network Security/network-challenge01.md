@@ -1,3 +1,7 @@
+$ tshark -r network_security01.pcap -Y "frame contains PK" -T fields -e tcp.stream
+
+20097
+
 $ tshark -r network_security01.pcap -Y "frame contains PK" -z follow,tcp,raw,20097 | tail -n+8 | head -n-1 | xxd -r -p> secret.zip
 
 $ fcrackzip -u -D -p rockyou.txt secret.zip
