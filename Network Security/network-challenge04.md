@@ -1,45 +1,27 @@
-# Network - Challenge 02
+$ tshark -r network_security04.pcap --export-objects http,network_security04
 
-This challenge was an pcap file.
+26157 359.529163 212.192.246.16 → 202.139.203.149 HTTP 194 GET /secret/zip HTTP/1.1
+26159 359.529697 212.192.246.16 → 202.139.203.149 HTTP 199 GET /secret/zipfiles HTTP/1.1
+26161 359.530216 212.192.246.16 → 202.139.203.149 HTTP 195 GET /secret/zips HTTP/1.1
+26601 578.530216 212.192.246.16 → 202.139.203.149 HTTP 454 GET /download/secret.zip HTTP/1.1
 
-Open pcap file with NetworkMiner.
+$ 7z x secret.zip
 
-Found that attacker was trying to bruteforce a directory.
+/dev
 
-![image-20221003140122985](./network-challenge04.assets/image-20221003140122985.png)
+$ cat dev/* | sort | uniq | awk '{print "echo \""$1"\"|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d"}'| bash
 
-![image-20221003140140549](./network-challenge04.assets/image-20221003140140549.png)
 
-![image-20221003140155411](./network-challenge04.assets/image-20221003140155411.png)
-
-If you use NetworkMiner like me. You can right click "open folder" to see all file from pcap dump.
-
-![image-20221003140213158](./network-challenge04.assets/image-20221003140213158.png)
-
-![image-20221003140230734](./network-challenge04.assets/image-20221003140230734.png)
-
-Found secret.zip file
-
-![image-20221003142436377](./network-challenge04.assets/image-20221003142436377.png)
-
-This time zip file contain a lot of text file.
-
-![image-20221003142518924](./network-challenge04.assets/image-20221003142518924.png)
-
-To catch an SUS file, i trying to md5sum all file in directory.
-
-```
-md5sum *
-```
-
-![image-20221003142640976](./network-challenge04.assets/image-20221003142640976.png)
-
-Found an imposter. file test_69.txt
-
-```
-Vm0weGQxTXdNVWRYV0d4VFYwZG9WMVl3WkZOVU1WcHpXa2M1VjAxWGVGWlZiVEZIVmpGYWMySkVUbGhoTVhCUVZteFZlRmRIVmtkaVIwWlRWakpvYjFaclpIcGxSbGw1Vkd0YWFGSnRVbGhVVkVGM1pVWmtXR1JIZEZOaVZscDZWVzAxUzJGV1NuTmpTRUpYWVRGYVNGUnJXbHBsUm1SMFVteHdWMDFFVmxwV1ZFb3dZVEZaZVZOcmFHaFRSVXBYV1ZkMFlWUkdXbGRYYlhScVRWZFNlbFl5TVRCVWJVcEhZMFJhVjJKVVFYaFdWRVpyVTBaS2NWZHNaR2xTTW1odlZtMXdUMkl5UmtkalJWcFlZbFZhV0ZSWGRHRlRiR1J5VjJ0MFZXSlZjRWhaTUZwM1ZqSkZlVlJZYUZaaGExcG9WakJhVDJNeVNrZFRiV3hvVFRCS1dWWXhaRFJpTVVWNVZtNU9WMWRIVWxsWldIQnpWMFpTVjJGRlRsTmlSbkJKVkZaU1UyRkdXbk5qUkVaV1ZqTm9WRlpxUm1GV01rNUhWRzFHVTFKV2NFVldiR1EwVVRGYVZrMVZWazVTUkVFNQ==
-```
-
-Decode with base64 9 times
-
-![image-20221003142748622](./network-challenge04.assets/image-20221003142748622.png)
+base64: invalid input
+base64: invalid input
+base64: invalid input
+base64: invalid input
+base64: invalid input
+tctt2022{M3s$age_Secr3t_1n_C0rr3ct_F!l3}
+tctt2022{M3s$ag
+base64: invalid input
+base64: invalid input
+base64: invalid input
+base64: invalid input
+base64: invalid input
+tctt2022{M3s$ag
