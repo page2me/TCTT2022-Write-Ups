@@ -3,7 +3,6 @@
 # program-challenge02.py
 from pyzbar import pyzbar
 from PIL import Image
-#load qr code imge
 b = []
 for a in range(936):
   image = Image.open(f"challenge{a:04d}.png")
