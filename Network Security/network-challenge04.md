@@ -20,17 +20,6 @@ $ ls -l dev | sort| head
 
 -rwxrwxr-x 1 root root 602 Sep 11 08:01 test_11.txt
 
--rwxrwxr-x 1 root root 602 Sep 11 08:01 test_12.txt
-
--rwxrwxr-x 1 root root 602 Sep 11 08:01 test_13.txt
-
--rwxrwxr-x 1 root root 602 Sep 11 08:01 test_14.txt
-
--rwxrwxr-x 1 root root 602 Sep 11 08:01 test_15.txt
-
--rwxrwxr-x 1 root root 602 Sep 11 08:01 test_16.txt
-
--rwxrwxr-x 1 root root 602 Sep 11 08:01 test_17.txt
 
 $ cat dev/test_69.txt | sort | uniq | awk '{print "echo "$1"|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d"}'| bash
 
