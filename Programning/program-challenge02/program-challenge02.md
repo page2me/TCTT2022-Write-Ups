@@ -15,4 +15,6 @@ for a in range(936):
 print("".join(b))
 ````
 
-# 
+$ python program-challenge02.py | base64 -d | grep -o -E 'tctt2022{(.*?)}'
+
+tctt2022{r3P37i7Iv3_745K5_N33d_4U7Om47IoN}
