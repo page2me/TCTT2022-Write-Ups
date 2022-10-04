@@ -14,4 +14,4 @@ print(hex(pow(c, inverse(e,phi), n))[2:-1].decode("hex"))
 $ python2 crypto-challenge06.py
 
 tctt2022{M4nY_f4C70rs_M4Y_83_W34k_F0R_RS4}
-[https://ctftime.org/writeup/15587]https://ctftime.org/writeup/15587
+[https://ctftime.org/writeup/15587]
