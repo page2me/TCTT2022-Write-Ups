@@ -1,4 +1,4 @@
-$ tshark -r network_security04.pcap --export-objects http,network_security04
+$ tshark -r network_security04.pcap --export-objects http,network_security04 | grep secret.zip
 
 26157 359.529163 212.192.246.16 → 202.139.203.149 HTTP 194 GET /secret/zip HTTP/1.1
 
