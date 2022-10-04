@@ -32,31 +32,6 @@ $ ls -l dev | sort| head
 
 -rwxrwxr-x 1 root root 602 Sep 11 08:01 test_17.txt
 
-$ cat dev/* | sort | uniq | awk '{print "echo \""$1"\"|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d"}'| bash
-
-
-base64: invalid input
-
-base64: invalid input
-
-base64: invalid input
-
-base64: invalid input
-
-base64: invalid input
+$ cat dev/test_69.txt | sort | uniq | awk '{print "echo "$1"|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d|base64 -d"}'| bash
 
 tctt2022{M3s$age_Secr3t_1n_C0rr3ct_F!l3}
-
-tctt2022{M3s$ag
-
-base64: invalid input
-
-base64: invalid input
-
-base64: invalid input
-
-base64: invalid input
-
-base64: invalid input
-
-tctt2022{M3s$ag
